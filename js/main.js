@@ -29,7 +29,7 @@
       <div class="card-image">
       <img
 
-       src="${BASE}${e.image || 'assets/images/fin-del-mundo.jpg'}" 
+       src="${BASE}${e.image}" 
         alt="${t(e.name)}" 
        onerror="this.style.display='none'"
        >
