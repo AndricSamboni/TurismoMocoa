@@ -24,14 +24,33 @@
       const tags=e.tags
       .map(x=>`<span class="tag">${x}</span>`)
       .join('');
+
+// 1. LIMPIEZA DE RUTA 
+  let imgPath = e.image;
+  
+  if (imgPath.startsWith('../')) {
+    imgPath = imgPath.replace('../', '');
+  }
+
+  if (imgPath.startsWith('/')) {
+    imgPath = imgPath.substring(1);
+  }
+
+  // 2. CONSTRUCCIÓN SEGURA DE LA URL
+  let safeBase = BASE.endsWith('/') ? BASE.slice(0, -1) : BASE;
+  
+  // Si BASE está vacío, usamos solo imgPath. Si tiene algo (ej: "/mi-repo"), los unimos con "/"
+  let finalSrc = safeBase ? `${safeBase}/${imgPath}` : imgPath;
+
+    
       return `
       <article class="experience-card">
       <div class="card-image">
       <img
 
-       src="${BASE}${e.image}" 
-        alt="${t(e.name)}" 
-       onerror="this.style.display='none'"
+       src="${finalSrc}" 
+          alt="${t(e.name)}" 
+          onerror="console.error('Fallo cargando:', this.src); this.style.display='none'"
        >
        <div class="image-fallback">${t(e.name)}</div>
        </div>
