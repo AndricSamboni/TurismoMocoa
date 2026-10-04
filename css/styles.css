@@ -172,7 +172,7 @@ h3{
     content:"";
     position:absolute;
     inset:0;
-    background:url('./assets/images/hero-mocoa.webp') center/cover;
+    background:url('../assets/images/hero-mocoa.webp') center/cover;
     opacity:.72
 }
 .hero-art-overlay{
