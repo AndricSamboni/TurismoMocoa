@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Mocoa Vive - mapa de experiencias turísticas de Mocoa, Putumayo">
+    <title>Mocoa Vive · Mapa</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Leaflet: necesario para mostrar el mapa interactivo -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""
+    >
+</head>
+<body data-page="map" data-title="Mapa de experiencias">
+    <a class="skip" href="#main">Saltar al contenido</a>
+
+    <div id="site-header"></div>
+
+    <main id="main">
+        <section class="detail-hero">
+            <div class="container">
+                <div class="eyebrow">🗺️ Mocoa</div>
+                <h1 data-map-title>Mapa de experiencias</h1>
+                <p data-map-description style="max-width:760px;color:var(--muted);font-size:1.08rem">
+                    Explora los puntos de interés y abre la ficha de cada experiencia.
+                </p>
+                <div class="actions" style="margin-top:20px">
+                    <a class="btn secondary" href="index.html" data-map-home>← Volver al inicio</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="padding-top:20px">
+            <div class="container">
+                <div class="map-layout">
+                    <aside class="map-panel">
+                        <input
+                            id="mapSearch"
+                            class="search"
+                            type="search"
+                            placeholder="Buscar experiencia..."
+                            aria-label="Buscar experiencia"
+                        >
+                        <div id="mapList" class="map-list"></div>
+                    </aside>
+                    <div id="map" aria-label="Mapa interactivo de experiencias turísticas"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Leaflet debe cargarse antes de map.js -->
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""
+    ></script>
+    <script src="js/map.js"></script>
+</body>
+</html>
