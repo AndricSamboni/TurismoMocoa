@@ -159,7 +159,7 @@ window.MOCOA_DATA = {
     {
       "id": "fin-del-mundo",
       "category": "naturaleza",
-      "image": "assets/images/fin-del-mundo.jpg",
+      "image": "assets/images/fin-del-mundo.webp",
       "coords": [
         1.10344,
         -76.62776
@@ -189,7 +189,7 @@ window.MOCOA_DATA = {
     {
       "id": "hornoyaco",
       "category": "naturaleza",
-      "image": "assets/images/hornoyaco.jpg",
+      "image": "assets/images/hornoyaco.webp",
       "coords": [
         1.1435,
         -76.6412
@@ -249,7 +249,7 @@ window.MOCOA_DATA = {
     {
       "id": "mandiyaco",
       "category": "naturaleza",
-      "image": "assets/images/mandiyaco.jpg",
+      "image": "assets/images/mandiyaco.webp",
       "coords": [
         1.1595,
         -76.5708
@@ -279,7 +279,7 @@ window.MOCOA_DATA = {
     {
       "id": "loma-mocoa",
       "category": "naturaleza",
-      "image": "assets/images/loma-mocoa.jpg",
+      "image": "assets/images/loma-mocoa.webp",
       "coords": [
         1.1491,
         -76.6475
@@ -309,7 +309,7 @@ window.MOCOA_DATA = {
     {
       "id": "cavernas-licamancha",
       "category": "naturaleza",
-      "image": "assets/images/cavernas-licamancha.jpg",
+      "image": "assets/images/cavernas-licamancha.webp",
       "coords": [
         1.236,
         -76.682
@@ -339,7 +339,7 @@ window.MOCOA_DATA = {
     {
       "id": "cea",
       "category": "biodiversidad",
-      "image": "assets/images/cea.jpg",
+      "image": "assets/images/cea.webp",
       "coords": [
         1.0882298,
         -76.632225
@@ -369,7 +369,7 @@ window.MOCOA_DATA = {
     {
       "id": "paway",
       "category": "biodiversidad",
-      "image": "assets/images/paway.jpg",
+      "image": "assets/images/paway.webp",
       "coords": [
         1.129,
         -76.624
@@ -399,7 +399,7 @@ window.MOCOA_DATA = {
     {
       "id": "parque-santander",
       "category": "cultura",
-      "image": "assets/images/parque-central.jpg",
+      "image": "assets/images/parque-central.webp",
       "coords": [
         1.1478,
         -76.6481
@@ -429,7 +429,7 @@ window.MOCOA_DATA = {
     {
       "id": "catedral-san-miguel",
       "category": "cultura",
-      "image": "assets/images/catedral-mocoa.jpg",
+      "image": "assets/images/catedral-mocoa.webp",
       "coords": [
         1.1477,
         -76.6483
@@ -489,7 +489,7 @@ window.MOCOA_DATA = {
     {
       "id": "carnaval-agua",
       "category": "cultura",
-      "image": "assets/images/carnaval-agua.jpg",
+      "image": "assets/images/carnaval-agua.webp",
       "coords": [
         1.1478,
         -76.6481
@@ -519,7 +519,7 @@ window.MOCOA_DATA = {
     {
       "id": "carnaval-mocoa",
       "category": "cultura",
-      "image": "assets/images/carnaval-mocoa.jpg",
+      "image": "assets/images/carnaval-mocoa.webp",
       "coords": [
         1.1478,
         -76.6481
@@ -549,7 +549,7 @@ window.MOCOA_DATA = {
     {
       "id": "tacacho",
       "category": "gastronomia",
-      "image": "assets/images/tacacho.jpg",
+      "image": "assets/images/tacacho.webp",
       "coords": [
         1.1478,
         -76.6481
@@ -579,7 +579,7 @@ window.MOCOA_DATA = {
     {
       "id": "maito-pescado",
       "category": "gastronomia",
-      "image": "assets/images/maito.jpg",
+      "image": "assets/images/maito.webp",
       "coords": [
         1.1478,
         -76.6481
@@ -639,7 +639,7 @@ window.MOCOA_DATA = {
     {
       "id": "al-humo",
       "category": "gastronomia",
-      "image": "assets/images/al-humo.jpg",
+      "image": "assets/images/al-humo.webp",
       "coords": [
         1.149,
         -76.651
@@ -669,7 +669,7 @@ window.MOCOA_DATA = {
     {
       "id": "tour-gastronomico-paz",
       "category": "gastronomia",
-      "image": "assets/images/tour-gastronomico-paz.jpg",
+      "image": "assets/images/tour-gastronomico-paz.webp",
       "coords": [
         1.1478,
         -76.6481
@@ -699,7 +699,7 @@ window.MOCOA_DATA = {
     {
       "id": "amazonico",
       "category": "gastronomia",
-      "image": "assets/images/amazonico.jpg",
+      "image": "assets/images/amazonico.webp",
       "coords": [
         1.149,
         -76.648
