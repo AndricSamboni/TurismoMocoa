@@ -18,61 +18,63 @@
     document.querySelector('#menuBtn')?.addEventListener('click',()=>document.querySelector('#nav').classList.toggle('mobile-open'));
   }
   function injectFooter(){const el=document.querySelector('#site-footer');if(!el)return;el.innerHTML=`<footer class="site-footer"><div class="container footer-grid"><div><h3>${t(D.site.name)}</h3><p>${t(D.site.tagline)}.</p></div><div><h3>${lang==='es'?'Explora':'Explore'}</h3><p><a href="${BASE}mapa.html">${lang==='es'?'Mapa de experiencias':'Experience map'}</a></p><p><a href="${BASE}naturaleza.html">${t(D.categories.naturaleza.title)}</a></p></div><div><h3>${lang==='es'?'Proyecto académico':'Academic project'}</h3><p>${lang==='es'?'Aplicación multimedia turística para Mocoa, Putumayo.':'Tourism multimedia application for Mocoa, Putumayo.'}</p></div></div><div class="container credits">${lang==='es'?'Contenido informativo: verificar horarios, accesos, tarifas y condiciones antes de cada visita.':'Informational content: verify schedules, access, prices and conditions before each visit.'}</div></footer>`}
-  function card(id){
-    const e=getExp(id);
-     if(!e)return '';
-      const tags=e.tags
-      .map(x=>`<span class="tag">${x}</span>`)
-      .join('');
+ function card(id) {
+  const e = getExp(id);
+  if (!e) return '';
+  
+  const tags = e.tags
+    .map(x => `<span class="tag">${x}</span>`)
+    .join('');
 
-// 1. LIMPIEZA DE RUTA 
+  // 1. LIMPIEZA DE RUTA (La magia para GitHub Pages)
   let imgPath = e.image;
   
+  // Si la ruta empieza con "../" (pensada para subpáginas), se lo quitamos
   if (imgPath.startsWith('../')) {
     imgPath = imgPath.replace('../', '');
   }
-
+  // Si la ruta empieza con "/" (raíz absoluta), se lo quitamos
   if (imgPath.startsWith('/')) {
     imgPath = imgPath.substring(1);
   }
 
   // 2. CONSTRUCCIÓN SEGURA DE LA URL
+  // Quitamos la barra final de BASE si la tiene, para evitar doble barra (//)
   let safeBase = BASE.endsWith('/') ? BASE.slice(0, -1) : BASE;
   
   // Si BASE está vacío, usamos solo imgPath. Si tiene algo (ej: "/mi-repo"), los unimos con "/"
   let finalSrc = safeBase ? `${safeBase}/${imgPath}` : imgPath;
 
-    
-      return `
-      <article class="experience-card">
+  return `
+    <article class="experience-card">
       <div class="card-image">
-      <img
-
-       src="${finalSrc}" 
+        <img
+          src="${finalSrc}" 
           alt="${t(e.name)}" 
           onerror="console.error('Fallo cargando:', this.src); this.style.display='none'"
-       >
-       <div class="image-fallback">${t(e.name)}</div>
-       </div>
-       <div class="card-body">
-       <h3>${t(e.name)}</h3>
-       <div class="card-meta">
-       📍 ${t(e.location)}
-       </div>
-       <p>${t(e.short)}</p>
-       <div class="tags">
-       ${tags}
-       </div>
-       <div class="actions" style="margin-top:14px">
-       <a
-        class="btn small"
-        href="${BASE}experiencias/${e.id}.html"
         >
-        ${lang==='es'?'Ver experiencia':'View experience'}
-        </a>
+        <div class="image-fallback">${t(e.name)}</div>
+      </div>
+      <div class="card-body">
+        <h3>${t(e.name)}</h3>
+        <div class="card-meta">
+          📍 ${t(e.location)}
         </div>
+        <p>${t(e.short)}</p>
+        <div class="tags">
+          ${tags}
         </div>
-        </article>`}
+        <div class="actions" style="margin-top:14px">
+          <a
+            class="btn small"
+            href="${BASE}experiencias/${e.id}.html"
+          >
+            ${lang === 'es' ? 'Ver experiencia' : 'View experience'}
+          </a>
+        </div>
+      </div>
+    </article>`;
+}
   window.renderCategoryPage=(categoryId)=>{const d=D.categories[categoryId];document.body.dataset.title=t(d.title);const title=document.querySelector('[data-page-title]');if(title)title.textContent=t(d.title);const desc=document.querySelector('[data-page-desc]');if(desc)desc.textContent=t(d.description);const container=document.querySelector('#subsections');if(!container)return;container.innerHTML=Object.entries(d.subsections).map(([key,s])=>`<section class="subsection"><div class="subsection-title"><div><div class="eyebrow">${d.icon} ${categoryId}</div><h2>${t(s.title)}</h2></div></div><div class="experience-grid">${s.items.map(card).join('')}</div></section>`).join('');setText()}
   window.initCommon=()=>{injectHeader();injectFooter();setText()};
   window.renderHome=()=>{initCommon();const featured=D.experiences.slice(0,6);document.querySelector('#featured').innerHTML=featured.map(card).join('');document.querySelector('#categoryGrid').innerHTML=Object.entries(D.categories).map(([id,c])=>`<a class="category-card" href="${id}.html"><div class="category-icon">${c.icon}</div><h3>${t(c.title)}</h3><p>${t(c.description)}</p><span class="text-link">${lang==='es'?'Explorar →':'Explore →'}</span></a>`).join('');setText()}
