@@ -1,99 +1,67 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta name="description" content="Mocoa Vive - experiencias turísticas de Mocoa, Putumayo">
-        <title>Mocoa Vive</title>
-        <link rel="stylesheet" href="../css/styles.css">
-    </head>
-    <body data-page="experience">
-        <a class="skip" href="#main">Saltar al contenido</a>
-        <div id="site-header"></div>
-        <main id="main">
-            <section class="detail-hero">
-                <div class="container">
-                    <div class="breadcrumbs">
-                        <a href="../index.html">Mocoa Vive</a> · 
-                        <a href="../cultura.html">Cultura</a>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mocoa Vive: experiencia turística en Mocoa, Putumayo">
+    <title>Mocoa Vive</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-page="experience" data-experience-id="parque-santander">
+    <a class="skip" href="#main" data-i18n="ui.skip">Saltar al contenido</a>
+    <div id="site-header"></div>
+    <main id="main">
+        <section class="detail-hero">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a href="../index.html">Mocoa Vive</a> · <a data-exp-category href="../cultura.html">cultura</a>
+                </div>
+                <div class="detail-grid">
+                    <div class="detail-photo">
+                        <img data-exp-image src="../assets/images/parque-central.webp" alt="Vista aérea del Parque General Santander y su zona central en Mocoa." decoding="async">
                     </div>
-                    <div class="detail-grid">
-                        <div class="detail-photo">
-                            <img data-exp-image src="../assets/images/parque-central.webp" alt="">
-                        </div>
-                        <div class="detail-copy">
-                            <div class="eyebrow">Experiencia turística</div>
-                            <h1 data-exp-name></h1>
-                            <div class="card-meta" data-exp-location></div>
-                            <p data-exp-short></p>
-                            <div class="tags" data-exp-tags></div>
-                            <div class="actions" style="margin-top:20px">
-                                <a class="btn" data-exp-map href="../mapa.html">Ver en el mapa</a>
-                                <a class="btn secondary" href="../cultura.html">Volver a categoría</a>
-                            </div>
+                    <div class="detail-copy">
+                        <div class="eyebrow" data-i18n="ui.touristExperience">Experiencia turística</div>
+                        <h1 data-exp-name>Parque General Santander</h1>
+                        <div class="card-meta" data-exp-location></div>
+                        <p data-exp-short></p>
+                        <div class="tags" data-exp-tags></div>
+                        <div class="actions" style="margin-top:20px">
+                            <a class="btn" data-exp-map href="../mapa.html" data-i18n="ui.viewOnMap">Ver en el mapa</a>
+                            <a class="btn secondary" data-exp-back-category href="../cultura.html" data-i18n="ui.backCategory">Volver a categoría</a>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="section">
-                <div class="container" style="max-width:900px">
-                    <div class="section-head"><div>
-                        <div class="eyebrow">Sobre la experiencia</div>
-                        <h2>Conoce el lugar</h2>
-                        <section class="experience-detail">
-
-    <div class="detail-content">
-
-        <div class="detail-text">
-            <p>
-                El Parque General Santander se encuentra en el corazón de Mocoa y constituye
+            </div>
+        </section>
+        <section class="section">
+            <div class="container experience-content-container">
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow" data-i18n="ui.aboutExperience">Sobre la experiencia</div>
+                        <h2 data-i18n="ui.learnPlace">Conoce el lugar</h2>
+                    </div>
+                </div>
+                <section class="experience-detail" aria-label="Detalles y galería de la experiencia">
+                    <div class="detail-content">
+                        <div class="detail-text">
+                            <p data-exp-extra="0">El Parque General Santander se encuentra en el corazón de Mocoa y constituye
 uno de los principales espacios de encuentro del municipio. Su ubicación
 permite observar parte de la dinámica cotidiana de la ciudad y acercarse
-a diferentes actividades comerciales, culturales y sociales.
-            </p>
-
-            <p>
-                Recorrer el parque también permite comenzar una visita por el centro de
+a diferentes actividades comerciales, culturales y sociales.</p>
+                            <p data-exp-extra="1">Recorrer el parque también permite comenzar una visita por el centro de
 Mocoa y conocer otros lugares representativos ubicados en sus alrededores.
 Es un punto de referencia para comprender la vida urbana y la identidad
-local.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="detail-gallery">
-
-        <div class="gallery-main">
-            <img
-                src="../assets/images/parque-central-1.webp"
-                alt="Vista de la experiencia"
-            >
-        </div>
-
-        <div class="gallery-side">
-
-            <img
-                src="../assets/images/parque-central-2.webp"
-                alt="Paisaje de la experiencia"
-            >
-
-            <img
-                src="../assets/images/parque-central-3.webp"
-                alt="Detalle de la experiencia"
-            >
-
-        </div>
-
-    </div>
-
-</section>
+local.</p>
+                        </div>
                     </div>
-                </div>
-                <p data-exp-description style="font-size:1.05rem;color:var(--muted)"></p>
-                <div class="notice" style="margin-top:22px">La información turística puede cambiar. Confirma condiciones de acceso, seguridad, horarios, precios y disponibilidad con fuentes oficiales o prestadores locales antes de desplazarte.</div>
+                    <div class="detail-gallery" aria-label="Galería de imágenes">
+                        <div class="gallery-main"><img src="../assets/images/parque-central-1.webp" alt="Jardines y caminos del Parque General Santander." loading="lazy" decoding="async"></div>
+                        <div class="gallery-side"><img src="../assets/images/parque-central-2.webp" alt="Zona central del parque con piso decorativo y árboles." loading="lazy" decoding="async"><img src="../assets/images/parque-central-3.webp" alt="Vista aérea de la plaza y los edificios del centro de Mocoa." loading="lazy" decoding="async"></div>
+                    </div>
+                </section>
+                <p data-exp-description class="experience-summary"></p>
+                <div class="notice" style="margin-top:22px"><strong data-i18n="ui.visitorNoticeTitle">Información para visitantes.</strong> <span data-i18n="ui.NoticeParqueCentral"></span></div>
             </div>
         </section>
     </main>

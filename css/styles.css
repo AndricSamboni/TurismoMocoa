@@ -638,3 +638,26 @@ h3{
     }
 
 }
+
+
+/* Créditos, tabla de atribución y lectura de las fichas */
+.credits-page { display: grid; gap: 42px; }
+.credits-page h2 { margin-bottom: 18px; }
+.credit-disclosure p { margin: 10px 0 0; line-height: 1.7; }
+.table-wrap { width: 100%; overflow-x: auto; margin-top: 20px; }
+.credits-table { width: 100%; border-collapse: collapse; text-align: left; font-size: .92rem; }
+.credits-table th, .credits-table td { padding: 12px; border-bottom: 1px solid var(--line, #ddd); vertical-align: top; }
+.credits-table th { font-weight: 700; }
+.credits-table code { font-size: .82em; overflow-wrap: anywhere; }
+.source-list { padding-left: 1.35rem; line-height: 1.75; }
+.source-list li { padding: 0 0 10px 4px; }
+.source-list a { font-weight: 650; }
+.experience-content-container { max-width: 900px; }
+.experience-summary { font-size: 1.05rem; color: var(--muted); line-height: 1.8; margin-top: 24px; }
+.detail-gallery.one-gallery-image .gallery-side { grid-template-rows: 1fr; }
+.detail-gallery.one-gallery-image .gallery-side img { min-height: 200px; }
+@media (max-width: 700px) {
+  .credits-table { min-width: 820px; }
+  .source-list { overflow-wrap: anywhere; }
+  .detail-gallery.one-gallery-image .gallery-side { grid-template-columns: 1fr; grid-template-rows: 200px; }
+}

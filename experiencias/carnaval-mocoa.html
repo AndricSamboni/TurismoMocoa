@@ -1,99 +1,67 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta name="description" content="Mocoa Vive - experiencias turísticas de Mocoa, Putumayo">
-        <title>Mocoa Vive</title>
-        <link rel="stylesheet" href="../css/styles.css">
-    </head>
-    <body data-page="experience">
-        <a class="skip" href="#main">Saltar al contenido</a>
-        <div id="site-header"></div>
-        <main id="main">
-            <section class="detail-hero">
-                <div class="container">
-                    <div class="breadcrumbs">
-                        <a href="../index.html">Mocoa Vive</a> · 
-                        <a href="../cultura.html">Cultura</a>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mocoa Vive: experiencia turística en Mocoa, Putumayo">
+    <title>Mocoa Vive</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-page="experience" data-experience-id="carnaval-mocoa">
+    <a class="skip" href="#main" data-i18n="ui.skip">Saltar al contenido</a>
+    <div id="site-header"></div>
+    <main id="main">
+        <section class="detail-hero">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a href="../index.html">Mocoa Vive</a> · <a data-exp-category href="../cultura.html">cultura</a>
+                </div>
+                <div class="detail-grid">
+                    <div class="detail-photo">
+                        <img data-exp-image src="../assets/images/carnaval-mocoa.webp" alt="Comparsa con trajes coloridos durante el Carnaval de Mocoa." decoding="async">
                     </div>
-                    <div class="detail-grid">
-                        <div class="detail-photo">
-                            <img data-exp-image src="../assets/images/carnaval-mocoa.webp" alt="">
-                        </div>
-                        <div class="detail-copy">
-                            <div class="eyebrow">Experiencia turística</div>
-                            <h1 data-exp-name></h1>
-                            <div class="card-meta" data-exp-location></div>
-                            <p data-exp-short></p>
-                            <div class="tags" data-exp-tags></div>
-                            <div class="actions" style="margin-top:20px">
-                                <a class="btn" data-exp-map href="../mapa.html">Ver en el mapa</a>
-                                <a class="btn secondary" href="../cultura.html">Volver a categoría</a>
-                            </div>
+                    <div class="detail-copy">
+                        <div class="eyebrow" data-i18n="ui.touristExperience">Experiencia turística</div>
+                        <h1 data-exp-name>Carnaval de Mocoa</h1>
+                        <div class="card-meta" data-exp-location></div>
+                        <p data-exp-short></p>
+                        <div class="tags" data-exp-tags></div>
+                        <div class="actions" style="margin-top:20px">
+                            <a class="btn" data-exp-map href="../mapa.html" data-i18n="ui.viewOnMap">Ver en el mapa</a>
+                            <a class="btn secondary" data-exp-back-category href="../cultura.html" data-i18n="ui.backCategory">Volver a categoría</a>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="section">
-                <div class="container" style="max-width:900px">
-                    <div class="section-head"><div>
-                        <div class="eyebrow">Sobre la experiencia</div>
-                        <h2>Conoce el lugar</h2>
-                        <section class="experience-detail">
-
-    <div class="detail-content">
-
-        <div class="detail-text">
-            <p>
-                El Carnaval de Mocoa reúne expresiones culturales, musicales y festivas que
+            </div>
+        </section>
+        <section class="section">
+            <div class="container experience-content-container">
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow" data-i18n="ui.aboutExperience">Sobre la experiencia</div>
+                        <h2 data-i18n="ui.learnPlace">Conoce el lugar</h2>
+                    </div>
+                </div>
+                <section class="experience-detail" aria-label="Detalles y galería de la experiencia">
+                    <div class="detail-content">
+                        <div class="detail-text">
+                            <p data-exp-extra="0">El Carnaval de Mocoa reúne expresiones culturales, musicales y festivas que
 reflejan parte de la diversidad cultural del municipio y del sur de Colombia.
 Sus actividades permiten que diferentes comunidades participen mediante
-desfiles, presentaciones y manifestaciones artísticas.
-            </p>
-
-            <p>
-                La celebración constituye un espacio para conocer tradiciones locales y
+desfiles, presentaciones y manifestaciones artísticas.</p>
+                            <p data-exp-extra="1">La celebración constituye un espacio para conocer tradiciones locales y
 compartir con la comunidad. La programación, recorridos y actividades pueden
 cambiar cada año, por lo que es conveniente consultar las fuentes oficiales
-antes de planificar la visita.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="detail-gallery">
-
-        <div class="gallery-main">
-            <img
-                src="../assets/images/carnaval-mocoa-3.webp"
-                alt="Vista de la experiencia"
-            >
-        </div>
-
-        <div class="gallery-side">
-
-            <img
-                src="../assets/images/carnaval-mocoa-1.webp"
-                alt="Paisaje de la experiencia"
-            >
-
-            <img
-                src="../assets/images/carnaval-mocoa-2.webp"
-                alt="Detalle de la experiencia"
-            >
-
-        </div>
-
-    </div>
-
-</section>
+antes de planificar la visita.</p>
+                        </div>
                     </div>
-                </div>
-                <p data-exp-description style="font-size:1.05rem;color:var(--muted)"></p>
-                <div class="notice" style="margin-top:22px">La información turística puede cambiar. Confirma condiciones de acceso, seguridad, horarios, precios y disponibilidad con fuentes oficiales o prestadores locales antes de desplazarte.</div>
+                    <div class="detail-gallery" aria-label="Galería de imágenes">
+                        <div class="gallery-main"><img src="../assets/images/carnaval-mocoa-3.webp" alt="Comparsa con vestuario festivo durante el Carnaval de Mocoa." loading="lazy" decoding="async"></div>
+                        <div class="gallery-side"><img src="../assets/images/carnaval-mocoa-1.webp" alt="Carroza decorada y participantes del carnaval." loading="lazy" decoding="async"><img src="../assets/images/carnaval-mocoa-2.webp" alt="Desfile de carnaval en una calle de Mocoa." loading="lazy" decoding="async"></div>
+                    </div>
+                </section>
+                <p data-exp-description class="experience-summary"></p>
+                <div class="notice" style="margin-top:22px"><strong data-i18n="ui.visitorNoticeTitle">Información para visitantes.</strong> <span data-i18n="ui.NoticeCarnavalBlancosNegros"></span></div>
             </div>
         </section>
     </main>

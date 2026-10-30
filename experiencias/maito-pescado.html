@@ -1,98 +1,67 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta name="description" content="Mocoa Vive - experiencias turísticas de Mocoa, Putumayo">
-        <title>Mocoa Vive</title>
-        <link rel="stylesheet" href="../css/styles.css">
-    </head>
-    <body data-page="experience"><a class="skip" href="#main">Saltar al contenido</a>
-        <div id="site-header"></div>
-        <main id="main">
-            <section class="detail-hero">
-                <div class="container">
-                    <div class="breadcrumbs">
-                        <a href="../index.html">Mocoa Vive</a> · 
-                        <a href="../gastronomia.html">Gastronomia</a>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mocoa Vive: experiencia turística en Mocoa, Putumayo">
+    <title>Mocoa Vive</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-page="experience" data-experience-id="maito-pescado">
+    <a class="skip" href="#main" data-i18n="ui.skip">Saltar al contenido</a>
+    <div id="site-header"></div>
+    <main id="main">
+        <section class="detail-hero">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a href="../index.html">Mocoa Vive</a> · <a data-exp-category href="../gastronomia.html">gastronomia</a>
+                </div>
+                <div class="detail-grid">
+                    <div class="detail-photo">
+                        <img data-exp-image src="../assets/images/maito.webp" alt="Maito de pescado servido con ingredientes de la cocina amazónica." decoding="async">
                     </div>
-                    <div class="detail-grid">
-                        <div class="detail-photo">
-                            <img data-exp-image src="../assets/images/maito.webp" alt="">
-                        </div>
-                        <div class="detail-copy">
-                            <div class="eyebrow">Experiencia turística</div>
-                            <h1 data-exp-name></h1>
-                            <div class="card-meta" data-exp-location></div>
-                            <p data-exp-short></p>
-                            <div class="tags" data-exp-tags></div>
-                            <div class="actions" style="margin-top:20px">
-                                <a class="btn" data-exp-map href="../mapa.html">Ver en el mapa</a>
-                                <a class="btn secondary" href="../gastronomia.html">Volver a categoría</a>
-                            </div>
+                    <div class="detail-copy">
+                        <div class="eyebrow" data-i18n="ui.touristExperience">Experiencia turística</div>
+                        <h1 data-exp-name>Maito de pescado</h1>
+                        <div class="card-meta" data-exp-location></div>
+                        <p data-exp-short></p>
+                        <div class="tags" data-exp-tags></div>
+                        <div class="actions" style="margin-top:20px">
+                            <a class="btn" data-exp-map href="../mapa.html" data-i18n="ui.viewOnMap">Ver en el mapa</a>
+                            <a class="btn secondary" data-exp-back-category href="../gastronomia.html" data-i18n="ui.backCategory">Volver a categoría</a>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="section">
-                <div class="container" style="max-width:900px">
-                    <div class="section-head"><div>
-                        <div class="eyebrow">Sobre la experiencia</div>
-                        <h2>Conoce el lugar</h2>
-                        <section class="experience-detail">
-
-    <div class="detail-content">
-
-        <div class="detail-text">
-            <p>
-                El maito de pescado es una preparación tradicional de la Amazonía en la que
+            </div>
+        </section>
+        <section class="section">
+            <div class="container experience-content-container">
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow" data-i18n="ui.aboutExperience">Sobre la experiencia</div>
+                        <h2 data-i18n="ui.learnPlace">Conoce el lugar</h2>
+                    </div>
+                </div>
+                <section class="experience-detail" aria-label="Detalles y galería de la experiencia">
+                    <div class="detail-content">
+                        <div class="detail-text">
+                            <p data-exp-extra="0">El maito de pescado es una preparación tradicional de la Amazonía en la que
 el pescado se cocina envuelto en hojas, utilizando técnicas que conservan
 sus sabores y aromas. El plato forma parte de las expresiones gastronómicas
-relacionadas con los productos disponibles en el territorio.
-            </p>
-
-            <p>
-                Además de su sabor, el maito permite conocer cómo los ingredientes locales
+relacionadas con los productos disponibles en el territorio.</p>
+                            <p data-exp-extra="1">Además de su sabor, el maito permite conocer cómo los ingredientes locales
 y las técnicas tradicionales hacen parte de la cultura alimentaria de la
 región. Es una preparación especialmente interesante para quienes desean
-conocer el Putumayo a través de su gastronomía.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="detail-gallery">
-
-        <div class="gallery-main">
-            <img
-                src="../assets/images/maito-1.webp"
-                alt="Vista de la experiencia"
-            >
-        </div>
-
-        <div class="gallery-side">
-
-            <img
-                src="../assets/images/maito-2.webp"
-                alt="Paisaje de la experiencia"
-            >
-
-            <img
-                src="../assets/images/maito-3.webp"
-                alt="Detalle de la experiencia"
-            >
-
-        </div>
-
-    </div>
-
-</section>
+conocer el Putumayo a través de su gastronomía.</p>
+                        </div>
                     </div>
-                </div>
-                <p data-exp-description style="font-size:1.05rem;color:var(--muted)"></p>
-                <div class="notice" style="margin-top:22px">La información turística puede cambiar. Confirma condiciones de acceso, seguridad, horarios, precios y disponibilidad con fuentes oficiales o prestadores locales antes de desplazarte.</div>
+                    <div class="detail-gallery" aria-label="Galería de imágenes">
+                        <div class="gallery-main"><img src="../assets/images/maito-1.webp" alt="Ingredientes frescos utilizados en una preparación de pescado." loading="lazy" decoding="async"></div>
+                        <div class="gallery-side"><img src="../assets/images/maito-2.webp" alt="Pescado preparado con acompañamientos regionales." loading="lazy" decoding="async"><img src="../assets/images/maito-3.webp" alt="Pescado envuelto en hojas para una preparación tradicional." loading="lazy" decoding="async"></div>
+                    </div>
+                </section>
+                <p data-exp-description class="experience-summary"></p>
+                <div class="notice" style="margin-top:22px"><strong data-i18n="ui.visitorNoticeTitle">Información para visitantes.</strong> <span data-i18n="ui.NoticeMaito"></span></div>
             </div>
         </section>
     </main>

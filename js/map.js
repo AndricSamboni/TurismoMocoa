@@ -1,76 +1,69 @@
-(function(){
-  const D=window.MOCOA_DATA;
-  const getLang=()=>localStorage.getItem('mocoa-lang')||'es';
-  const t=o=>o?.[getLang()]??o?.es??o??'';
+(function () {
+  const D = window.MOCOA_DATA;
+  const getLang = () => localStorage.getItem('mocoa-lang') || 'es';
+  const t = (value) => value?.[getLang()] ?? value?.es ?? value ?? '';
 
-  document.addEventListener('DOMContentLoaded',()=>{
-    if(!window.L){
-      console.error('Leaflet no se cargó. Revisa la conexión a Internet o la URL de Leaflet.');
-      const mapEl=document.querySelector('#map');
-      if(mapEl){
-        mapEl.innerHTML='<div class="map-error">No se pudo cargar el mapa interactivo. Verifica tu conexión a Internet y vuelve a cargar la página.</div>';
+  document.addEventListener('DOMContentLoaded', () => {
+    if (!window.L) {
+      console.error('Leaflet did not load. Check your internet connection or the Leaflet URL.');
+      const mapElement = document.querySelector('#map');
+      if (mapElement) {
+        const error = document.createElement('div');
+        error.className = 'map-error';
+        error.textContent = t(D.ui.mapError);
+        mapElement.replaceChildren(error);
       }
       return;
     }
 
-    const map=L.map('map',{scrollWheelZoom:false}).setView([1.1478,-76.6481],11);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-      maxZoom:19,
-      attribution:'&copy; OpenStreetMap contributors'
+    const map = L.map('map', { scrollWheelZoom: false }).setView([1.1478, -76.6481], 11);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    const markers={};
-    const list=document.querySelector('#mapList');
-    const params=new URLSearchParams(location.search);
-    const focus=params.get('focus');
+    const markers = {};
+    const list = document.querySelector('#mapList');
+    const params = new URLSearchParams(location.search);
+    const focus = params.get('focus');
+    const language = getLang();
 
-    D.experiences.forEach(e=>{
-      const m=L.marker(e.coords).addTo(map).bindPopup(
-        `<strong>${t(e.name)}</strong><br><span>${t(e.location)}</span><br><a href="experiencias/${e.id}.html">${getLang()==='es'?'Ver experiencia':'View experience'}</a>`
+    D.experiences.forEach((experience) => {
+      const detailLink = `experiencias/${experience.id}.html`;
+      const mapMarker = L.marker(experience.coords).addTo(map).bindPopup(
+        `<strong>${t(experience.name)}</strong><br><span>${t(experience.location)}</span><br><a href="${detailLink}">${language === 'es' ? 'Ver experiencia' : 'View experience'}</a>`
       );
-      markers[e.id]=m;
+      markers[experience.id] = mapMarker;
 
-      const b=document.createElement('button');
-      b.type='button';
-      b.className='map-item';
-      b.dataset.id=e.id;
-      b.innerHTML=`<strong>${t(e.name)}</strong><span>${t(e.location)}</span>`;
-      b.onclick=()=>focusMarker(e.id);
-      list.appendChild(b);
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'map-item';
+      button.dataset.id = experience.id;
+      button.innerHTML = `<strong>${t(experience.name)}</strong><span>${t(experience.location)}</span>`;
+      button.addEventListener('click', () => focusMarker(experience.id));
+      list?.appendChild(button);
     });
 
-    function focusMarker(id){
-      const e=D.experiences.find(x=>x.id===id);
-      if(!e)return;
-      map.setView(e.coords,14);
+    function focusMarker(id) {
+      const experience = D.experiences.find((item) => item.id === id);
+      if (!experience || !markers[id]) return;
+      map.setView(experience.coords, 14);
       markers[id].openPopup();
-      document.querySelectorAll('.map-item').forEach(x=>
-        x.classList.toggle('active',x.dataset.id===id)
-      );
+      document.querySelectorAll('.map-item').forEach((item) => {
+        item.classList.toggle('active', item.dataset.id === id);
+      });
     }
 
-    const search=document.querySelector('#mapSearch');
-    search?.addEventListener('input',event=>{
-      const q=event.target.value.toLowerCase().trim();
-      document.querySelectorAll('.map-item').forEach(b=>{
-        b.style.display=b.textContent.toLowerCase().includes(q)?'block':'none';
+    const search = document.querySelector('#mapSearch');
+    search?.addEventListener('input', (event) => {
+      const query = event.target.value.toLocaleLowerCase().trim();
+      document.querySelectorAll('.map-item').forEach((item) => {
+        item.style.display = item.textContent.toLocaleLowerCase().includes(query) ? 'block' : 'none';
       });
     });
 
-    const title=document.querySelector('[data-map-title]');
-    const description=document.querySelector('[data-map-description]');
-    const home=document.querySelector('[data-map-home]');
-    if(getLang()==='en'){
-      if(title)title.textContent='Experience map';
-      if(description)description.textContent='Explore points of interest and open the page for each experience.';
-      if(search){search.placeholder='Search experience...';search.setAttribute('aria-label','Search experience');}
-      if(home)home.textContent='← Back to home';
-    }
-
-    if(focus)focusMarker(focus);
-
-    // Leaflet necesita recalcular el tamaño cuando el contenedor ya está visible.
-    setTimeout(()=>map.invalidateSize(),100);
+    if (focus) focusMarker(focus);
+    // Recalculate the map's dimensions after the layout is rendered.
+    requestAnimationFrame(() => map.invalidateSize());
   });
 })();
