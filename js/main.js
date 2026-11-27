@@ -37,11 +37,15 @@
   function injectHeader() {
     const host = document.querySelector('#site-header');
     if (!host) return;
+    const page = document.body.dataset.page;
+    const current = page === 'experience' ? window.getExp(document.body.dataset.experienceId) : null;
+    const sectionTitle = current ? window.t(current.name) : page === 'category' ? window.t(D.categories[document.body.dataset.category].title) : page === 'map' ? window.t(D.ui.experienceMap) : page === 'credits' ? window.t(D.ui.creditsAndSources) : '';
+    const backHref = current ? `${BASE}${current.category}.html` : `${BASE}index.html`;
     host.innerHTML = `
       <header class="site-header">
         <div class="container nav" id="nav">
           <a class="brand" href="${BASE}index.html" aria-label="Mocoa Vive — ${lang === 'es' ? 'inicio' : 'home'}"><span class="brand-mark" aria-hidden="true">M</span><span>Mocoa Vive</span></a>
-          <nav class="nav-links" aria-label="${lang === 'es' ? 'Navegación principal' : 'Main navigation'}">
+          <nav id="main-nav-links" class="nav-links" aria-label="${lang === 'es' ? 'Navegación principal' : 'Main navigation'}">
             <a href="${BASE}index.html">${window.t(D.ui.home)}</a>
             <a href="${BASE}naturaleza.html">${window.t(D.categories.naturaleza.title)}</a>
             <a href="${BASE}biodiversidad.html">${window.t(D.categories.biodiversidad.title)}</a>
@@ -54,9 +58,10 @@
               <button type="button" data-lang="es">ES</button>
               <button type="button" data-lang="en">EN</button>
             </div>
-            <button type="button" class="menu-btn" id="menuBtn" aria-label="${window.t(D.ui.menu)}" aria-expanded="false">☰</button>
+            <button type="button" class="menu-btn" id="menuBtn" aria-controls="main-nav-links" aria-label="${window.t(D.ui.menu)}" aria-expanded="false">☰</button>
           </div>
         </div>
+        ${sectionTitle ? `<div class="mobile-section-bar"><div class="container mobile-section-inner"><a href="${backHref}" class="mobile-back">← ${window.t(D.ui.back)}</a><span>${sectionTitle}</span></div></div>` : ''}
       </header>`;
 
     host.querySelectorAll('[data-lang]').forEach((button) => {
@@ -104,17 +109,17 @@
     const image = `${BASE}${experience.image}`;
     return `
       <article class="experience-card">
-        <div class="card-image">
+        <a class="card-image" href="${BASE}experiencias/${experience.id}.html" aria-label="${window.t(D.ui.viewExperience)}: ${window.t(experience.name)}">
           <img src="${image}" alt="${window.t(experience.imageAlt || experience.name)}" loading="lazy" decoding="async" onerror="this.style.display='none'">
-          <div class="image-fallback">${window.t(experience.name)}</div>
-        </div>
+          <span class="image-fallback" aria-hidden="true">${window.t(experience.name)}</span>
+        </a>
         <div class="card-body">
           <h3>${window.t(experience.name)}</h3>
           <div class="card-meta">📍 ${window.t(experience.location)}</div>
           <p>${window.t(experience.short)}</p>
           <div class="tags">${renderTags(experience.tags)}</div>
           <div class="actions" style="margin-top:14px">
-            <a class="btn small" href="${BASE}experiencias/${experience.id}.html">${window.t(D.ui.viewExperience)}</a>
+            <a class="btn small card-detail-link" aria-label="${window.t(D.ui.viewExperience)}: ${window.t(experience.name)}" href="${BASE}experiencias/${experience.id}.html">${window.t(D.ui.viewExperience)}</a>
           </div>
         </div>
       </article>`;
@@ -204,6 +209,15 @@
     }
     const backLink = document.querySelector('[data-exp-back-category]');
     if (backLink) backLink.href = `../${experience.category}.html`;
+    const detailCopy = document.querySelector('.detail-copy');
+    if (detailCopy) {
+      const facts = document.createElement('div');
+      facts.className = 'facts experience-facts';
+      facts.innerHTML = `<div class="fact"><small>${window.t(D.ui.activitiesTitle)}</small><strong>${window.t(experience.activities)}</strong></div><div class="fact"><small>${window.t(D.ui.locationTitle)}</small><strong>${window.t(experience.location)}</strong><p>${window.t(D.ui.locationNote)}</p></div>`;
+      detailCopy.querySelector('.actions')?.after(facts);
+    }
+    const related = D.experiences.filter(item => item.category === experience.category && item.id !== id).slice(0, 3);
+    if (related.length) document.querySelector('#main').insertAdjacentHTML('beforeend', `<section class="section related-section"><div class="container"><div class="section-head"><div><h2>${window.t(D.ui.relatedTitle)}</h2><p>${window.t(D.ui.relatedDescription)}</p></div></div><div class="experience-grid">${related.map(item => card(item.id)).join('')}</div></div></section>`);
     setText();
   };
 
@@ -229,7 +243,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     const page = document.body.dataset.page;
     if (page === 'home') window.renderHome();
-    else if (page === 'category') window.renderCategoryPage(document.body.dataset.category);
+    else if (page === 'category') { window.initCommon(); window.renderCategoryPage(document.body.dataset.category); }
     else if (page === 'experience') window.renderExperience();
     else if (page === 'credits') window.renderCredits();
     else if (page === 'map') window.initCommon();

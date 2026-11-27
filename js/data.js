@@ -174,6 +174,7 @@ window.MOCOA_DATA = {
   "experiences": [
     {
       "id": "fin-del-mundo",
+      "activities": {"es": "Recorrer senderos y contemplar la cascada y el bosque.", "en": "Hike trails and admire the waterfall and forest."},
       "category": "naturaleza",
       "image": "assets/images/fin-del-mundo.webp",
       "coords": [
@@ -237,6 +238,7 @@ window.MOCOA_DATA = {
     },
     {
       "id": "hornoyaco",
+      "activities": {"es": "Caminar por el entorno de bosque y observar la cascada.", "en": "Walk through the forest surroundings and view the waterfall."},
       "category": "naturaleza",
       "image": "assets/images/hornoyaco.webp",
       "coords": [
@@ -300,6 +302,7 @@ window.MOCOA_DATA = {
     },
     {
       "id": "ojos-de-dios",
+      "activities": {"es": "Contemplar la formación rocosa y el paisaje de la cascada.", "en": "Admire the rock formation and waterfall scenery."},
       "category": "naturaleza",
       "image": "assets/images/ojo-dios.webp",
       "coords": [
@@ -357,12 +360,13 @@ window.MOCOA_DATA = {
       ],
       "galleryImages": [
         "assets/images/ojo-dios-1.webp",
-        "assets/images/ojo-dios-2.webp",
+        "assets/images/ojo-Dios-2.webp",
         "assets/images/ojo-dios-3.webp"
       ]
     },
     {
       "id": "mandiyaco",
+      "activities": {"es": "Observar el río, el cañón y sus formaciones rocosas.", "en": "Observe the river, canyon and rock formations."},
       "category": "naturaleza",
       "image": "assets/images/mandiyaco.webp",
       "coords": [
@@ -426,6 +430,7 @@ window.MOCOA_DATA = {
     },
     {
       "id": "loma-mocoa",
+      "activities": {"es": "Contemplar la panorámica de Mocoa y su entorno.", "en": "Enjoy panoramic views of Mocoa and its surroundings."},
       "category": "naturaleza",
       "image": "assets/images/la-loma-1.webp",
       "coords": [
@@ -484,6 +489,7 @@ window.MOCOA_DATA = {
     },
     {
       "id": "cavernas-licamancha",
+      "activities": {"es": "Explorar la cueva con acompañamiento de un guía local.", "en": "Explore the cave with a local guide."},
       "category": "naturaleza",
       "image": "assets/images/cavernas-licamancha.webp",
       "coords": [
@@ -547,6 +553,7 @@ window.MOCOA_DATA = {
     },
     {
       "id": "cea",
+      "activities": {"es": "Conocer la fauna, la flora y las iniciativas de conservación.", "en": "Learn about wildlife, plants and conservation initiatives."},
       "category": "biodiversidad",
       "image": "assets/images/cea.webp",
       "coords": [
@@ -610,6 +617,7 @@ window.MOCOA_DATA = {
     },
     {
       "id": "paway",
+      "activities": {"es": "Conocer mariposas y observar aves en un entorno natural.", "en": "Learn about butterflies and watch birds in a natural setting."},
       "category": "biodiversidad",
       "image": "assets/images/paway.webp",
       "coords": [
@@ -673,6 +681,7 @@ window.MOCOA_DATA = {
     },
     {
       "id": "parque-santander",
+      "activities": {"es": "Recorrer el centro y conocer espacios de encuentro urbano.", "en": "Walk around downtown and discover public gathering places."},
       "category": "cultura",
       "image": "assets/images/parque-central.webp",
       "coords": [
@@ -736,6 +745,7 @@ window.MOCOA_DATA = {
     },
     {
       "id": "catedral-san-miguel",
+      "activities": {"es": "Apreciar la arquitectura y el trabajo en madera del templo.", "en": "Appreciate the church architecture and woodwork."},
       "category": "cultura",
       "image": "assets/images/catedral-mocoa.webp",
       "coords": [
@@ -799,6 +809,7 @@ window.MOCOA_DATA = {
     },
     {
       "id": "aniversario-mocoa",
+      "activities": {"es": "Conocer la memoria local y consultar la programación de celebraciones.", "en": "Discover local history and check the celebration program."},
       "category": "cultura",
       "image": "assets/images/aniversario-mocoa.webp",
       "coords": [
@@ -862,6 +873,7 @@ window.MOCOA_DATA = {
     },
     {
       "id": "carnaval-agua",
+      "activities": {"es": "Conocer la tradición de juegos con agua y encuentros comunitarios.", "en": "Discover the tradition of water games and community gatherings."},
       "category": "cultura",
       "image": "assets/images/carnaval-agua.webp",
       "coords": [
@@ -925,6 +937,7 @@ window.MOCOA_DATA = {
     },
     {
       "id": "carnaval-mocoa",
+      "activities": {"es": "Conocer tradiciones, desfiles y expresiones artísticas según la programación.", "en": "Discover traditions, parades and artistic events according to the program."},
       "category": "cultura",
       "image": "assets/images/carnaval-mocoa.webp",
       "coords": [
@@ -988,6 +1001,7 @@ window.MOCOA_DATA = {
     },
     {
       "id": "tacacho",
+      "activities": {"es": "Conocer y probar preparaciones tradicionales de plátano.", "en": "Discover and taste traditional plantain dishes."},
       "category": "gastronomia",
       "image": "assets/images/tacacho.webp",
       "coords": [
@@ -1051,6 +1065,7 @@ window.MOCOA_DATA = {
     },
     {
       "id": "maito-pescado",
+      "activities": {"es": "Conocer y probar la preparación de pescado envuelto en hojas.", "en": "Discover and taste fish prepared in leaves."},
       "category": "gastronomia",
       "image": "assets/images/maito.webp",
       "coords": [
@@ -1059,7 +1074,7 @@ window.MOCOA_DATA = {
       ],
       "name": {
         "es": "Maito de pescado",
-        "en": "Maito de fish"
+        "en": "Fish maito"
       },
       "location": {
         "es": "Cocina regional del Putumayo",
@@ -1114,6 +1129,7 @@ window.MOCOA_DATA = {
     },
     {
       "id": "frutas-amazonicas",
+      "activities": {"es": "Explorar sabores regionales en mercados y preparaciones locales.", "en": "Explore regional flavors in markets and local dishes."},
       "category": "gastronomia",
       "image": "assets/images/frutas-amazonicas.webp",
       "coords": [
@@ -1177,6 +1193,7 @@ window.MOCOA_DATA = {
     },
     {
       "id": "al-humo",
+      "activities": {"es": "Conocer la oferta de tacacho y preparaciones al humo; confirmar disponibilidad.", "en": "Discover tacacho and smoked dishes; confirm availability."},
       "category": "gastronomia",
       "image": "assets/images/al-humo.webp",
       "coords": [
@@ -1240,6 +1257,7 @@ window.MOCOA_DATA = {
     },
     {
       "id": "tour-gastronomico-paz",
+      "activities": {"es": "Conocer el antecedente gastronómico de 2022 y su relación con los productos locales.", "en": "Learn about the 2022 food event and its connection to local produce."},
       "category": "gastronomia",
       "image": "assets/images/tour-gastronomico-paz.webp",
       "coords": [
@@ -1303,6 +1321,7 @@ window.MOCOA_DATA = {
     },
     {
       "id": "amazonico",
+      "activities": {"es": "Explorar la cocina amazónica contemporánea; consultar el menú vigente.", "en": "Explore contemporary Amazonian cuisine; check the current menu."},
       "category": "gastronomia",
       "image": "assets/images/amazonico.webp",
       "coords": [
@@ -1366,6 +1385,30 @@ window.MOCOA_DATA = {
     }
   ],
   "ui": {
+    "activitiesTitle": {"es": "Qué puedes hacer o conocer", "en": "What to do or discover"},
+    "locationTitle": {"es": "Ubicación de referencia", "en": "Reference location"},
+    "locationNote": {"es": "El punto del mapa es orientativo. Confirma el acceso o lugar exacto antes de visitar.", "en": "The map point is approximate. Confirm access or the exact location before visiting."},
+    "relatedTitle": {"es": "Sigue explorando", "en": "Keep exploring"},
+    "relatedDescription": {"es": "Otras experiencias de esta categoría para complementar tu recorrido.", "en": "Other experiences in this category to complement your trip."},
+    "back": {"es": "Volver", "en": "Back"},
+    "galleryLabel": {"es": "Galería de imágenes", "en": "Image gallery"},
+    "detailsLabel": {"es": "Detalles y galería de la experiencia", "en": "Experience details and gallery"},
+    "mapNoResults": {"es": "No se encontraron experiencias. Prueba otro nombre o lugar.", "en": "No experiences found. Try another name or place."},
+    "mapResults": {"es": "Experiencias encontradas", "en": "Experiences found"},
+    "mapHint": {"es": "Busca por nombre o ubicación. Selecciona un punto para verlo en el mapa o abre su ficha. Algunas coordenadas son orientativas y pueden coincidir.", "en": "Search by name or location. Select a point to see it on the map or open its details. Some coordinates are approximate and may overlap."},
+    "mapTilesError": {"es": "No se pudo cargar el mapa base. Puedes seguir consultando las fichas de la lista.", "en": "The basemap could not load. You can still open the experience details in the list."},
+    "sourceNameInterest": {"es": "Alcaldía de Mocoa — Sitios de interés", "en": "Mocoa Mayor’s Office — Points of interest"},
+    "sourceNameFestivals": {"es": "Alcaldía de Mocoa — Fiestas y celebraciones", "en": "Mocoa Mayor’s Office — Festivals and celebrations"},
+    "sourceNameColombiaTravel": {"es": "Colombia Travel / ProColombia — Mocoa", "en": "Colombia Travel / ProColombia — Mocoa"},
+    "sourceNameVisitMocoa": {"es": "Visita Putumayo — Mocoa", "en": "Visita Putumayo — Mocoa"},
+    "sourceNameAttractions": {"es": "Visita Putumayo — Atractivos", "en": "Visita Putumayo — Attractions"},
+    "sourceNameFinMundo": {"es": "Visita Putumayo — Fin del Mundo", "en": "Visita Putumayo — Fin del Mundo"},
+    "sourceNamePlan": {"es": "Alcaldía y Concejo Municipal de Mocoa — Plan de Desarrollo Territorial 2024–2027", "en": "Mocoa Mayor’s Office and Municipal Council — Territorial Development Plan 2024–2027"},
+    "sourceNameFontur": {"es": "FONTUR — Plan de Desarrollo Turístico de Mocoa", "en": "FONTUR — Mocoa Tourism Development Plan"},
+    "sourceNameTacacho": {"es": "Gaceta del Putumayo — Ordenanza 0856 de 2022", "en": "Putumayo Gazette — Ordinance 0856 of 2022"},
+    "sourceNameTour": {"es": "AgroNET — Tour Gastronómico por la Paz en Mocoa", "en": "AgroNET — Gastronomic Tour for Peace in Mocoa"},
+    "sourceNameAmazonico": {"es": "Amazónico Restaurante — Sitio oficial", "en": "Amazónico Restaurante — Official website"},
+
     "skip": {
       "es": "Saltar al contenido",
       "en": "Skip to main content"
@@ -1575,10 +1618,7 @@ window.MOCOA_DATA = {
 "es":"Horario de atención: Lunes a Sábado: 12:00 m a 10:00 pm. Domingos : 5:00 pm a 10:00 pm",
 "en":"Business Hours: Monday to Saturday: 12:00 pm to 10:00 pm. Sundays: 5:00 pm to 10:00 pm"
 },
-"NoticeTourGastronomicoPaz":{
-"es":"",
-"en":""
-},
+"NoticeTourGastronomicoPaz":{"es": "Esta ficha describe la edición de 2022 como antecedente; no anuncia un evento vigente.", "en": "This page describes the 2022 edition as a past event; it does not announce an upcoming event."},
 "NoticeAmazonico":{
 "es":"Horario de atención: Lunes a sábado de 12:00 m a 2:00 pm y de 6:00 pm a 9:30 pm",
 "en":"Business hours: Monday to Saturday from 12:00 pm to 2:00 pm and from 6:00 pm to 9:30 pm"
@@ -1601,22 +1641,13 @@ window.MOCOA_DATA = {
       "es": "Estado de atribución de las imágenes",
       "en": "Image attribution status"
     },
-    "imageCreditsNotice": {
-      "es": "Las atribuciones de esta tabla se organizaron con las referencias suministradas para el proyecto. Los archivos marcados como NA no cuentan con una fuente específica identificada. La referencia de origen no equivale por sí sola a una licencia de reutilización.",
-      "en": "The attributions in this table were compiled using the references provided for the project. Files marked as NA do not have a specific identified source. A source reference alone does not constitute a license for reuse."
-    },
+    "imageCreditsNotice": {"es": "Las atribuciones se organizaron con las referencias suministradas. NA indica que no se identificó una fuente específica. La atribución no equivale a permiso de reutilización; verifica las licencias antes de publicar.", "en": "Attributions were compiled from the supplied references. NA means no specific source was identified. Attribution is not permission to reuse; verify licenses before publication."},
     "imageExperience": {
       "es": "Experiencia",
       "en": "Experience"
     },
-    "imageFiles": {
-      "es": "Archivos de imagen incluidos",
-      "en": "Included image files"
-    },
-    "imageAttributionStatus": {
-      "es": "Autoría, fuente y licencia no documentadas en el ZIP recibido; verificar antes de publicar.",
-      "en": "Creator, source, and license are not documented in the supplied ZIP; verify before publication."
-    },
+    "imageFiles": {"es": "Archivo de imagen", "en": "Image file"},
+    "imageAttributionStatus": {"es": "Crédito", "en": "Credit"},
     "contentSourcesTitle": {
       "es": "Fuentes consultadas para el contenido",
       "en": "Sources consulted for the content"
@@ -2601,7 +2632,7 @@ window.MOCOA_DATA = {
     },
     {
       "experienceId": "ojos-de-dios",
-      "file": "ojo-dios-2.webp",
+      "file": "ojo-Dios-2.webp",
       "credit": {
         "es": "Fuente: Expotur Eco.",
         "en": "Source: Expotur Eco."

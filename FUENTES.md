@@ -62,7 +62,7 @@ Este registro identifica las referencias proporcionadas por el responsable del p
 | `mandiyaco-2.webp` | Fotografía propia. | Autoría propia; no se requiere enlace externo. NA / sin enlace |
 | `ojo-dios.webp` | Fuente: TuBarco. | TuBarco — Cascada Ojo de Dios. [Abrir fuente](https://tubarco.news/cascada-ojo-de-dios-la-maravilla-natural-de-putumayo-que-cautiva-a-los-viajeros/) |
 | `ojo-dios-1.webp` | Fuente indicada: publicación de Facebook. | Facebook — enlace proporcionado por el autor del proyecto. [Abrir fuente](https://www.facebook.com/share/1Foyf2qGd7/) |
-| `ojo-dios-2.webp` | Fuente: Expotur Eco. | Expotur Eco — Cascada Ojo de Dios. [Abrir fuente](https://expotur-eco.com/cascada-ojo-de-dios/?srsltid=AYCX9vI8WJ_Q_wii15qyNA03-pifeXFLPw6Gvjw6F0EDaTEGeWtisjdC) |
+| `ojo-Dios-2.webp` | Fuente: Expotur Eco. | Expotur Eco — Cascada Ojo de Dios. [Abrir fuente](https://expotur-eco.com/cascada-ojo-de-dios/?srsltid=AYCX9vI8WJ_Q_wii15qyNA03-pifeXFLPw6Gvjw6F0EDaTEGeWtisjdC) |
 | `ojo-dios-3.webp` | Fuente: Ruta de Viaje León. | Blog Ruta de Viaje León — cascada Fin del Mundo y Ojo de Dios. [Abrir fuente](https://rutadeviajelion.blogspot.com/2017/12/cascada-del-fin-del-mundo-y-el-ojo-de.html?m=1) |
 | `parque-central.webp` | Fuente indicada: publicación de Facebook. | Facebook — enlace proporcionado por el autor del proyecto. [Abrir fuente](https://www.facebook.com/share/1DQX68Nwfn/) |
 | `parque-central-1.webp` | Fuente: Radio Nacional de Colombia. | Radio Nacional — historia y origen de Mocoa. [Abrir fuente](https://www.radionacional.co/cultura/historia-colombiana/mocoa-putumayo-fundacion-historia-y-origen-cumple-461-anos) |

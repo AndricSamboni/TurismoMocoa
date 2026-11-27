@@ -45,9 +45,11 @@
                             placeholder="Buscar experiencia..."
                             aria-label="Buscar experiencia" data-i18n-placeholder="ui.searchExperience" data-i18n-aria="ui.mapSearchLabel"
                         >
+                        <p class="map-hint" data-i18n="ui.mapHint"></p>
+                        <p id="mapResults" class="map-hint" aria-live="polite"></p>
                         <div id="mapList" class="map-list"></div>
                     </aside>
-                    <div id="map" role="application" aria-label="Mapa interactivo de experiencias turísticas" data-i18n-aria="ui.mapAria"></div>
+                    <div class="map-view"><p id="mapStatus" class="notice" role="status" hidden></p><div id="map" role="region" aria-label="Mapa interactivo de experiencias turísticas" data-i18n-aria="ui.mapAria"></div></div>
                 </div>
             </div>
         </section>
